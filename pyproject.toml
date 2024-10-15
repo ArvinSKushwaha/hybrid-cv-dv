@@ -1,0 +1,26 @@
+[project]
+name = "hybrid-cv-dv"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Arvin Kushwaha", email = "arvin.singh.kushwaha@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.12"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["maturin>=1.2,<2.0"]
+build-backend = "maturin"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pip>=24.2",
+]
+
+[tool.maturin]
+python-source = "python"
+module-name = "hybrid_cv_dv._lowlevel"
+features = ["pyo3/extension-module"]
